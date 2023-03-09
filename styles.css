@@ -1,17 +1,41 @@
 #container {
-      display: grid;
-      grid-template-columns: repeat(16, 1fr);
-      grid-template-rows: repeat(16, 1fr);
-      gap: 1px;
-      background-color: rgba(238, 238, 238, 0.973);
-      padding: 10px;
-      width: 500px;
-      height: 500px;
-      margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    gap: 1px;
+    background-color: rgba(238, 238, 238, 0.973);
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
 }
+@media (max-width: 500px) {
+    #container {
+      width: 100%;
+      height: calc(100vw - 42px);
+      /* 
+      * 42px = 20px (top/bottom padding) + 1px (grid gap) + 20px (border)
+      * adjust accordingly if you change the padding/gap/border width 
+      */
+    }
+  }
 .square {
     background-color: rgb(22, 10, 134);
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    display: inline-block;
 }
 .square:hover{
     background-color: white;
 }
+#top-bar{
+    margin-bottom: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#reset-button {
+    margin-right: 10px;
+    padding: 10px;
+  }
