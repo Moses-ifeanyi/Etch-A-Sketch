@@ -1,0 +1,17 @@
+#container {
+      display: grid;
+      grid-template-columns: repeat(16, 1fr);
+      grid-template-rows: repeat(16, 1fr);
+      gap: 1px;
+      background-color: rgba(238, 238, 238, 0.973);
+      padding: 10px;
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+}
+.square {
+    background-color: rgb(22, 10, 134);
+}
+.square:hover{
+    background-color: white;
+}
